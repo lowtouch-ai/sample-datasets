@@ -1,0 +1,56 @@
+model:
+  sequence_length: 7
+  lstm_units: 128
+  gru_units: 128
+  dense_units: 128
+  dropout_rate: 0.3
+  learning_rate: 0.001
+  hours_to_predict: 240
+
+training:
+  epochs: 7
+  batch_size: 32
+  sequence_length: 7
+  lstm_units: 128
+  dense_units: 128
+  dropout_rate: 0.3
+  learning_rate: 0.01
+
+  target_file: "Gold_Price.csv"
+  date_column: "Date"
+  target_column: "Price"
+
+datasets:
+  Gold_Price.csv:
+    file_path: "Gold_Price.csv"
+    date_column: "Date"
+    frequency: "1D"
+    columns:
+      - "Price"
+      - "High"
+      - "Low"
+    target_column: "Price"
+    
+  INRUSDX.csv:
+    file_path: "INR_to_USD.csv"
+    date_column: "Date"
+    frequency: "1D"
+    columns:
+      - "High"
+      - "Low"
+      - "Open"
+      - "Close"
+
+predict:
+  file_path: "INRUSDX_Test_Data.csv"
+  columns:
+    - "High"
+    - "Low"
+    - "Open"
+    - "Close"
+  date_column: "Date"
+  frequency: "1D"
+
+setup:
+  memory_limit: 32
+  temp_directory: "/appz/tmp"
