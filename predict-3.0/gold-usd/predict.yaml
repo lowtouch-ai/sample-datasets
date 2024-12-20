@@ -1,56 +1,41 @@
 model:
-  sequence_length: 7
-  lstm_units: 128
-  gru_units: 128
-  dense_units: 128
-  dropout_rate: 0.3
-  learning_rate: 0.001
-  hours_to_predict: 240
+  steps_to_predict: 3
 
 training:
-  epochs: 7
-  batch_size: 32
-  sequence_length: 7
-  lstm_units: 128
-  dense_units: 128
+  epochs: 4
+  batch_size: 64
+  sequence_length: 50
+  lstm_units: 64
+  dense_units: 64
   dropout_rate: 0.3
-  learning_rate: 0.01
-
-  target_file: "Gold_Price.csv"
-  date_column: "Date"
+  learning_rate: 0.005
+  loss_function: mean_squared_error
   target_column: "Price"
+  date_column: "Date"
+  target_file: "GoldPrice.csv"
 
 datasets:
-  Gold_Price.csv:
-    file_path: "Gold_Price.csv"
+  GoldPrice.csv:
+    file_path: "GoldPrice.csv"
     date_column: "Date"
     frequency: "1D"
+    datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
       - "Price"
       - "High"
       - "Low"
     target_column: "Price"
-    
+
   INRUSDX.csv:
-    file_path: "INR_to_USD.csv"
+    file_path: "INRUSDX.csv"
     date_column: "Date"
     frequency: "1D"
+    datetime_format: "%d-%m-%Y" # Matches your dataset
     columns:
+      - "Open"
       - "High"
       - "Low"
-      - "Open"
-      - "Close"
-
-predict:
-  file_path: "INRUSDX_Test_Data.csv"
-  columns:
-    - "High"
-    - "Low"
-    - "Open"
-    - "Close"
-  date_column: "Date"
-  frequency: "1D"
 
 setup:
-  memory_limit: 32
-  temp_directory: "/appz/tmp"
+  memory_limit: 6
+
