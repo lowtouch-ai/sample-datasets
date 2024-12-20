@@ -12,11 +12,11 @@ training:
   loss_function: mean_squared_error
   target_column: "Price"
   date_column: "Date"
-  target_file: "GoldPrice.csv"
+  target_file: "Gold_Price.csv"
 
 datasets:
-  GoldPrice.csv:
-    file_path: "GoldPrice.csv"
+  Gold_Price.csv:
+    file_path: "Gold_Price.csv"
     date_column: "Date"
     frequency: "1D"
     datetime_format: "%Y-%m-%d" # Matches your dataset
@@ -26,8 +26,8 @@ datasets:
       - "Low"
     target_column: "Price"
 
-  INRUSDX.csv:
-    file_path: "INRUSDX.csv"
+  INR_to_USD.csv:
+    file_path: "INR_to_USD.csv"
     date_column: "Date"
     frequency: "1D"
     datetime_format: "%d-%m-%Y" # Matches your dataset
