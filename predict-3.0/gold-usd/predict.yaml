@@ -1,4 +1,5 @@
 model:
+  include_weakends: True
   steps_to_predict: 3
 
 training:
@@ -12,11 +13,11 @@ training:
   loss_function: mean_squared_error
   target_column: "Price"
   date_column: "Date"
-  target_file: "Gold_Price.csv"
+  target_file: "gold_price.csv"
 
 datasets:
-  Gold_Price.csv:
-    file_path: "Gold_Price.csv"
+  gold_price.csv:
+    file_path: "gold_price.csv"
     date_column: "Date"
     frequency: "1D"
     datetime_format: "%Y-%m-%d" # Matches your dataset
@@ -26,8 +27,8 @@ datasets:
       - "Low"
     target_column: "Price"
 
-  INR_to_USD.csv:
-    file_path: "INR_to_USD.csv"
+  inr_to_usd.csv:
+    file_path: "inr_to_usd.csv"
     date_column: "Date"
     frequency: "1D"
     datetime_format: "%d-%m-%Y" # Matches your dataset
