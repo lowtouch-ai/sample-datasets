@@ -1,6 +1,6 @@
 model:
   include_weakends: False
-  steps_to_predict: 30
+  steps_to_predict: 3
 
 training:
   epochs: 30
