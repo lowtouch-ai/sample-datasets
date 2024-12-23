@@ -1,16 +1,17 @@
 model:
-  include_weakends: True
-  steps_to_predict: 3
+  include_weakends: False
+  steps_to_predict: 30
 
 training:
-  epochs: 20
+  epochs: 30
   batch_size: 64
-  sequence_length: 50
-  lstm_units: 64
+  sequence_length: 10
+  lstm_units: 128
   dense_units: 64
   dropout_rate: 0.3
   learning_rate: 0.005
-  loss_function: mean_squared_error
+  loss_function: "huber"
+
   target_column: "Price"
   date_column: "Date"
   target_file: "daily_gold_price.csv"
@@ -39,4 +40,3 @@ datasets:
 
 setup:
   memory_limit: 6
-
