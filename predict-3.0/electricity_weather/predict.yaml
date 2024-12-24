@@ -1,0 +1,38 @@
+datasets:
+  inputs:
+    - file: "electricity.csv"
+      datetime_column: "DateTime"
+      columns:
+      - "Consumption"
+      - "Wind"
+      - "Hydroelectric"
+      - "Oil and Gas"
+    - file: "weather.csv"
+      datetime_column: "Date time"
+      columns:
+      - "Maximum Temperature"
+      - "Dew Point"
+      - "Relative Humidity"
+      - "Wind Speed"
+      - "Cloud Cover"
+      - "Visibility"
+      - "Sea Level Pressure"
+  target_column: "Consumption"
+  target_dataset_index: 0 # Specify the index of the dataset containing the target column
+  primary_dataset_granularity: 'H'
+  secondary_dataset_granularity: 'D' # Specify the granularity
+splitting:
+  steps_for_training: 999   # Removed
+  steps_for_prediction: 1  # Removed
+training:
+  sequence_length: 4
+  batch_size: 24
+  epochs: 50
+  density_ratio_number: 24 #  
+model:
+  lstm_units: 64
+  learning_rate: 0.001
+  high_feature_count: 3
+results:
+  file: "results.yaml"
+  output_predictions: "predictions.csv"
