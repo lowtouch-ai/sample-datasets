@@ -1,5 +1,5 @@
 model:
-  include_weakends: False
+  include_weakends: True
   steps_to_predict: 6
 
 training:
@@ -34,6 +34,7 @@ datasets:
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
       - "Returning.Visits"
+      - "Page.Loads"
   
 
 setup:
