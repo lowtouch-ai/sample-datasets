@@ -1,0 +1,5 @@
+error_percentage: 5.672686727110542
+model_accuracy: 94.32731327288946
+nyc_trip.csv_rows: 720
+nyc_weather.csv_rows: 794
+total_training_time: 5.314340353012085
