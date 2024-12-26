@@ -3,7 +3,7 @@ model:
   steps_to_predict: 3
 
 training:
-  epochs: 30
+  epochs: 50
   batch_size: 64
   sequence_length: 10
   lstm_units: 128
@@ -20,17 +20,16 @@ datasets:
   ev_dataset.csv:
     file_path: "ev_dataset.csv"
     date_column: "Date"
-    frequency: "1D"
-    datetime_format: "%d-%m-%Y" # Matches your dataset
+    frequency: "M" # Changed to a valid frequency
+    datetime_format: "%m-%d-%Y" # Matches your dataset
     columns:
-     
       - "EV_Sales_Quantity"
     target_column: "EV_Sales_Quantity"
 
   petrol_price.csv:
     file_path: "petrol_price.csv"
     date_column: "date"
-    frequency: "1D"
+    frequency: "M" # Changed to a valid frequency
     datetime_format: "%d-%m-%Y" # Matches your dataset
     columns:
       - "Maharashtra"
