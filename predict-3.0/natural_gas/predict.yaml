@@ -14,29 +14,28 @@ training:
 
   target_column: "Price"
   date_column: "Date"
-  target_file: "daily_gold_price.csv"
+  target_file: "gas_production.csv"
 
 datasets:
-  daily_gold_price.csv:
-    file_path: "daily_gold_price.csv"
+  natural_gas_price.csv:
+    file_path: "natural_gas_price.csv"
     date_column: "Date"
-    frequency: "30D"
+    frequency: "1D"
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
       - "Price"
-      - "High"
-      - "Low"
+      
     target_column: "Price"
 
-  inr_to_usd_exchange_rate.csv:
-    file_path: "inr_to_usd_exchange_rate.csv"
+  gas_production.csv:
+    file_path: "gas_production.csv"
     date_column: "Date"
-    frequency: "30D"
+    frequency: "1D"
     datetime_format: "%d-%m-%Y" # Matches your dataset
     columns:
-      - "Open"
-      - "High"
-      - "Low"
+      - "U.S."
+      - "Alaska"
+      - "Kansas"
 
 setup:
   memory_limit: 6
