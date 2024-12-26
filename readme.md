@@ -1,81 +1,73 @@
-### README for NYC Yellow Taxi Trip Data
+# README for Gold Price
 
-This README provides details about the two datasets used for analyzing dropoff\_datetime  
-: **nyc\_yellow\_taxi\_trip data** and **nyc\_weather Data`.csv`**.
+This README provides details about the two datasets used for analyzing gold prices: 
+- `daily_gold_price.csv`
+- `inr_to_usd_exchange_rate.csv`
 
-Status : Completed 
-
----
-
-### Primary Data: NYC Yellow Taxi Trip Data
-
-- **Description**: This dataset contains trip-level information from New York City’s Yellow Taxis, detailing count of every one hour. It is useful for analyzing taxi demand  
-    
-- **File Name**: nyc\_trip`.csv`  
-    
-- **Columns**:  
-    
-  - Date: The date and time when the meter was engaged.  
-  - count: The number of trips happened  in the particular time period. 
-
-
-- **Time Period**:  
-    
-  - Start:2016-01-01 00:00  
-  - End: 2016-01-30 23:00  
-  - No.of days: 30  
-  - No. of Rows: 721
-
-
-- **Frequency**:  
-    
-  - Hourly 
-
-
-- **Example Rows**:  
-  Date,count  
-  01-01-2016 00:00,25270
+## Status
+**Completed**
 
 ---
 
-### Secondary Data: NYC Weather Data
+## Dataset 1: Gold Price
 
-- **Description**: This dataset provides daily weather conditions for New York City . It includes detailed temperature, precipitation, and wind data. It can be used for weather trend analysis, forecasting, and understanding how weather impacts transportation systems like taxis​  
-    
-- **File Name**: nyc\_weather`.csv`.  
-    
-- **Columns**:
+**Description:**  
+Contains daily gold price data from 2014 to 2022, including price fluctuations, trading volume, and percentage changes in price.
 
-  - time: The date of the weather observation.  
-  - temperature : The maximum temperature for the day (in °C).  
-  - precipitation: Total precipitation for the day (in mm).  
-  - rain: Only liquid precipitation of the preceding hour including local showers and rain  
-  - Cloudcover (%):Total cloud cover as an area fraction  
-  - windspeed\_10m (km/h): Wind speed at 10 meters above ground.  
-  - winddirection\_10m (Â°): Wind direction at 10 meters above ground  
-    
+**File Name:** `daily_gold_price.csv`
 
-    
-- **Time Period**:  
-    
-  - Start: 2016-01-01T00:00  
-  - End: 2016-02-03T01:00   
-  - No.of days: 34 days (4 days Extra from 31 to 3\)  
-  - No.of Rows: 795 
+**Columns:**
+- **timestamp:** The time of the observation (daily intervals).
+- **Price:** The closing price of gold (in USD per ounce).
+- **Open:** The opening price of gold (in USD per ounce).
+- **High:** The highest price of gold during the day.
+- **Low:** The lowest price of gold during the day.
+- **Volume:** The total trading volume for gold (in ounces).
+- **Chg%:** The percentage change in gold price from the previous day.
 
+**Time Period:**
+- **Start:** 2014-01-01
+- **End:** 2022-08-05
+- **No. of days:** 3165 days - 2228 rows
 
-- **Frequency**:  
-    
-  - Hourly 
+**Frequency:**
+- Daily (1 day interval, only weekdays data)
 
+**Example Rows:**
+```
+Date, Price, Open, High, Low, Volume, Chg% 
+2014-01-06, 29119, 29300, 29395, 29051, 24380, -0.55
+```
 
-- **Example Rows**:  
-    
-  time,temperature\_2m, precipitation,rain,cloudcover,,windspeed\_10m ,winddirection\_10m   
-  2016-01-01T00:00,  7.6,            0,      0,         69,           10,                      296  
-  
-
-
-  
 ---
 
+## Dataset 2: INR to USD Exchange Rate
+
+**Description:**  
+Contains daily exchange rate data between the Indian Rupee (INR) and the US Dollar (USD), along with trading volume for the INR/USD pair.
+
+**File Name:** `inr_to_usd_exchange_rate.csv`
+
+**Columns:**
+- **timestamp:** The time of the observation (daily intervals).
+- **Open:** The opening INR to USD exchange rate.
+- **High:** The highest exchange rate during the day.
+- **Low:** The lowest exchange rate during the day.
+- **Close:** The closing INR to USD exchange rate.
+- **Adj Close:** The adjusted closing exchange rate (after accounting for corporate actions).
+- **Volume:** The volume of INR to USD traded.
+
+**Time Period:**
+- **Start:** 2014-01-01
+- **End:** 2022-08-05 (Weekend and holidays not added)
+- **Test Data:** 2022-08-15 (8-15 days)
+- **No. of Days:** 2250 rows (6 days more)
+
+**Frequency:**
+- Daily (1 day interval)
+
+**Example Rows:**
+```
+Date, Open, High, Low, Close, Adj Close, Volume 
+2003-12-01, 0.021878, 0.021923, 0.021868, 0.021877, 0.021877, 0
+```
