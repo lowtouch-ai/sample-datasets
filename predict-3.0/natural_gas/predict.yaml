@@ -14,7 +14,7 @@ training:
 
   target_column: "Price"
   date_column: "Date"
-  target_file: "gas_production.csv"
+  target_file: "natural_gas_price.csv"
 
 datasets:
   natural_gas_price.csv:
