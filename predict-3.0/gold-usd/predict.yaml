@@ -3,7 +3,7 @@ model:
   steps_to_predict: 3
 
 training:
-  epochs: 20
+  epochs: 5
   batch_size: 64
   sequence_length: 10
   lstm_units: 128
