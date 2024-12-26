@@ -34,7 +34,7 @@ datasets:
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
       - "Returning.Visits"
-      - "Page.Loads"
+   
   
 
 setup:
