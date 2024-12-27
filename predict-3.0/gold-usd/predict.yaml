@@ -20,7 +20,7 @@ datasets:
   daily_gold_price.csv:
     file_path: "daily_gold_price.csv"
     date_column: "Date"
-    frequency: "30D"
+    frequency: "1D"
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
       - "Price"
@@ -31,8 +31,8 @@ datasets:
   inr_to_usd_exchange_rate.csv:
     file_path: "inr_to_usd_exchange_rate.csv"
     date_column: "Date"
-    frequency: "30D"
-    datetime_format: "%d-%m-%Y" # Matches your dataset
+    frequency: "1D"
+    datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
       - "Open"
       - "High"

@@ -21,7 +21,7 @@ datasets:
     file_path: "web_traffic.csv"
     date_column: "Timestamp"
     frequency: "1H"
-    datetime_format: "%Y-%m-%d %H:%M" # Matches your dataset
+    datetime_format: "%Y-%m-%d %H:%M:%S" # Matches your dataset
     columns:
       - "TrafficCount"
       
@@ -35,7 +35,3 @@ datasets:
     columns:
       - "Returning.Visits"
    
-  
-
-setup:
-  memory_limit: 6

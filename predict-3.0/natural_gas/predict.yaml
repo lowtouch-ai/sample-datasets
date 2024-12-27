@@ -30,8 +30,8 @@ datasets:
   gas_production.csv:
     file_path: "gas_production.csv"
     date_column: "Date"
-    frequency: "1D"
-    datetime_format: "%d-%m-%Y" # Matches your dataset
+    frequency: "M"
+    datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
       - "U.S."
       - "Alaska"

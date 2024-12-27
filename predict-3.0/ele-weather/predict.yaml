@@ -1,15 +1,16 @@
 model:
   steps_to_predict: 3
   include_weakends: True
+  
 
 training:
-  epochs: 4
-  batch_size: 64
-  sequence_length: 50
+  epochs: 40
+  batch_size: 4
+  sequence_length: 4
   lstm_units: 64
-  dense_units: 64
-  dropout_rate: 0.3
-  learning_rate: 0.005
+  dense_units: 128
+  dropout_rate: 0.1
+  learning_rate: 0.001
   loss_function: mean_squared_error
   target_column: "Consumption"
   date_column: "DateTime"
