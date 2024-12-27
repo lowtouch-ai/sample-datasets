@@ -5,7 +5,7 @@ model:
 
 training:
   epochs: 50
-  batch_size: 64
+  batch_size: 32
   sequence_length: 30
   lstm_units: 128
   dense_units: 64
