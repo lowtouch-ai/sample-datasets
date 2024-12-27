@@ -66,8 +66,8 @@ Contains monthly average petrol prices for the top 15 states of India from 2017 
 **Example Rows:**
 
 ```plaintext
-Month, State, Petrol_Price  
-2018-01-01, Maharashtra, 77.87  
-2018-02-01, Maharashtra, 80.91  
+Month,  Maharashtra 
+2018-01-01,77.87  
+2018-02-01, 80.91  
 ```  
 ---
