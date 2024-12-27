@@ -35,13 +35,11 @@ Contains monthly data on Electric Vehicle (EV) sales across different states in 
 - Monthly
 
 **Example Rows:**
-
-| Date       | State      | Vehicle_Class | Vehicle_Category | EV_Sales_Quantity |  
-|------------|------------|---------------|------------------|--------------------|  
-| 2018-01-01 | Maharashtra| E-RICKSHAW(P) | Three-Wheeler    | 148                |  
-| 2018-02-01 | Maharashtra| E-RICKSHAW(P) | Three-Wheeler    | 164                |  
-
----
+```plaintext
+Date, State, Vehicle_Class, Vehicle_Category, EV_Sales_Quantity  
+2018-01-01, Maharashtra, E-RICKSHAW(P), Three-Wheeler, 148  
+2018-02-01, Maharashtra, E-RICKSHAW(P), Three-Wheeler, 164  
+```  
 
 ## Dataset 2: Indian States Petrol Prices  
 **Description:**  
@@ -67,9 +65,9 @@ Contains monthly average petrol prices for the top 15 states of India from 2017 
 
 **Example Rows:**
 
-| Month      | State      | Petrol_Price |  
-|------------|------------|--------------|  
-| 2018-01-01 | Maharashtra| 77.87        |  
-| 2018-02-01 | Maharashtra| 80.91        |  
-
+```plaintext
+Month, State, Petrol_Price  
+2018-01-01, Maharashtra, 77.87  
+2018-02-01, Maharashtra, 80.91  
+```  
 ---
