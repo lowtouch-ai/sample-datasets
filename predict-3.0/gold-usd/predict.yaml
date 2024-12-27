@@ -1,5 +1,5 @@
 model:
-  include_weakends: False
+  include_weekends: False
   steps_to_predict: 3
 
 training:
@@ -38,5 +38,4 @@ datasets:
       - "High"
       - "Low"
 
-setup:
-  memory_limit: 6
+

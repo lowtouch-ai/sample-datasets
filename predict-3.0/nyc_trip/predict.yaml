@@ -1,6 +1,6 @@
 model:
-  include_weakends: True
-  steps_to_predict: 3
+  include_weekends: True
+  steps_to_predict: 72
 
 training:
   epochs: 5
@@ -37,5 +37,3 @@ datasets:
       - "rain (mm)"
       - "cloudcover (%)"
 
-setup:
-  memory_limit: 6

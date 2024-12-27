@@ -1,6 +1,6 @@
 model:
-  steps_to_predict: 3
-  include_weakends: True
+  steps_to_predict: 72
+  include_weekends: True
   
 
 training:
@@ -39,5 +39,3 @@ datasets:
       - "Nuclear"
     target_column: "Consumption"
 
-setup:
-  memory_limit: 6

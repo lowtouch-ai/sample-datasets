@@ -1,5 +1,5 @@
 model:
-  include_weakends: True
+  include_weekends: True
   steps_to_predict: 3
 
 training:
@@ -36,6 +36,3 @@ datasets:
       - "U.S."
       - "Alaska"
       - "Kansas"
-
-setup:
-  memory_limit: 6

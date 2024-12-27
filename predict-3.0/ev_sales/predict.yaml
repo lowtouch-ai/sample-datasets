@@ -34,6 +34,3 @@ datasets:
     datetime_format: "%d-%m-%Y" # Matches your dataset
     columns:
       - "Maharashtra"
-
-setup:
-  memory_limit: 6
