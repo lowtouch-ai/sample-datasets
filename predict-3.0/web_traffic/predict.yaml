@@ -1,5 +1,5 @@
 model:
-  include_weakends: False
+  include_weakends: True
   steps_to_predict: 6
 
 training:
@@ -21,7 +21,7 @@ datasets:
     file_path: "web_traffic.csv"
     date_column: "Timestamp"
     frequency: "1H"
-    datetime_format: "%Y-%m-%d %H:%M" # Matches your dataset
+    datetime_format: "%Y-%m-%d %H:%M:%S" # Matches your dataset
     columns:
       - "TrafficCount"
       
@@ -34,7 +34,4 @@ datasets:
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
       - "Returning.Visits"
-  
-
-setup:
-  memory_limit: 6
+   
