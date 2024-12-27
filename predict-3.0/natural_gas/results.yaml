@@ -2,4 +2,5 @@ error_percentage: 2.6171440455118695
 gas_production.csv_rows: 121
 model_accuracy: 97.38285595448814
 natural_gas_price.csv_rows: 2642
-total_training_time: 22.656744480133057
+num_cores_used: 2
+total_training_time: 12.22683334350586

@@ -1,5 +1,6 @@
-error_percentage: 3.584241710329763
+error_percentage: 2.355968076028085
 ev_dataset.csv_rows: 53
-model_accuracy: 96.41575828967024
+model_accuracy: 97.64403192397192
+num_cores_used: 2
 petrol_price.csv_rows: 58
-total_training_time: 3.4963676929473877
+total_training_time: 8.189646244049072

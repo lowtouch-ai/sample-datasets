@@ -1,5 +1,6 @@
 daily_gold_price.csv_rows: 2227
-error_percentage: 0.9505252571002145
+error_percentage: 0.9180594807251703
 inr_to_usd_exchange_rate.csv_rows: 2246
-model_accuracy: 99.04947474289979
-total_training_time: 5.883155584335327
+model_accuracy: 99.08194051927482
+num_cores_used: 2
+total_training_time: 9.252872228622437
