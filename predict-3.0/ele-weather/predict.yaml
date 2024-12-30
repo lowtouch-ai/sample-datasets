@@ -1,11 +1,11 @@
 model:
-  steps_to_predict: 3
-  include_weakends: True
+  steps_to_predict: 72
+  include_weekends: True
   
 
 training:
-  epochs: 40
-  batch_size: 4
+  epochs: 4
+  batch_size: 64
   sequence_length: 4
   lstm_units: 64
   dense_units: 128
@@ -32,12 +32,10 @@ datasets:
     file_path: "electricity.csv"
     date_column: "DateTime"
     frequency: "1H"
-    datetime_format: "%Y-%m-%d"
+    datetime_format: "%Y-%m-%d %H:%M:%S"
     columns:
       - "Consumption"
       - "Wind"
       - "Nuclear"
     target_column: "Consumption"
 
-setup:
-  memory_limit: 6
