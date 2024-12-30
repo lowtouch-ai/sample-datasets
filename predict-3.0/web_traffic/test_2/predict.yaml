@@ -1,0 +1,37 @@
+model:
+  include_weekends: True
+  steps_to_predict: 72
+
+training:
+  epochs: 50
+  batch_size: 64
+  sequence_length: 10
+  lstm_units: 128
+  dense_units: 64
+  dropout_rate: 0.3
+  learning_rate: 0.005
+  loss_function: "huber"
+
+  target_column: "TrafficCount"
+  date_column: "Timestamp"
+  target_file: "web_traffic.csv"
+
+datasets:
+  web_traffic.csv:
+    file_path: "web_traffic.csv"
+    date_column: "Timestamp"
+    frequency: "1H"
+    datetime_format: "%Y-%m-%d %H:%M:%S" # Matches your dataset
+    columns:
+      - "TrafficCount"
+      
+    target_column: "TrafficCount"
+
+  website_visitors.csv:
+    file_path: "website_visitors.csv"
+    date_column: "Date"
+    frequency: "1D"
+    datetime_format: "%Y-%m-%d" # Matches your dataset
+    columns:
+      - "Returning.Visits"
+   

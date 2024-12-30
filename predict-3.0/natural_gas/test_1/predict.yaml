@@ -1,0 +1,38 @@
+model:
+  include_weekends: True
+  steps_to_predict: 3
+
+training:
+  epochs: 5
+  batch_size: 64
+  sequence_length: 10
+  lstm_units: 128
+  dense_units: 64
+  dropout_rate: 0.3
+  learning_rate: 0.005
+  loss_function: "huber"
+
+  target_column: "Price"
+  date_column: "Date"
+  target_file: "natural_gas_price.csv"
+
+datasets:
+  natural_gas_price.csv:
+    file_path: "natural_gas_price.csv"
+    date_column: "Date"
+    frequency: "1D"
+    datetime_format: "%Y-%m-%d" # Matches your dataset
+    columns:
+      - "Price"
+      
+    target_column: "Price"
+
+  gas_production.csv:
+    file_path: "gas_production.csv"
+    date_column: "Date"
+    frequency: "M"
+    datetime_format: "%Y-%m-%d" # Matches your dataset
+    columns:
+      - "U.S."
+      - "Alaska"
+      - "Kansas"

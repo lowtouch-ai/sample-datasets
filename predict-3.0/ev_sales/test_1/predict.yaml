@@ -1,0 +1,36 @@
+model:
+  include_weekends: True
+  steps_to_predict: 3
+  noise_factor: 0
+
+training:
+  epochs: 50
+  batch_size: 32
+  sequence_length: 30
+  lstm_units: 128
+  dense_units: 64
+  dropout_rate: 0.3
+  learning_rate: 0.001
+  loss_function: "huber"
+
+  target_column: "EV_Sales_Quantity"
+  date_column: "Date"
+  target_file: "ev_dataset.csv"
+
+datasets:
+  ev_dataset.csv:
+    file_path: "ev_dataset.csv"
+    date_column: "Date"
+    frequency: "M" # Changed to a valid frequency
+    datetime_format: "%m-%d-%Y" # Matches your dataset
+    columns:
+      - "EV_Sales_Quantity"
+    target_column: "EV_Sales_Quantity"
+
+  petrol_price.csv:
+    file_path: "petrol_price.csv"
+    date_column: "date"
+    frequency: "M" # Changed to a valid frequency
+    datetime_format: "%d-%m-%Y" # Matches your dataset
+    columns:
+      - "Maharashtra"
