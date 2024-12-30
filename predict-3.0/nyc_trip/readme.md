@@ -1,7 +1,8 @@
 
 # README for NYC Yellow Taxi Trip Data
 
-This README provides details about the two datasets used for analyzing `dropoff_datetime`
+This README provides details about the two datasets used for analyzing `dropoff_datetime`:
+
  **nyc_yellow_taxi_trip**
  **nyc_weather Data.csv**
 
