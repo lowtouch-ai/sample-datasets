@@ -5,8 +5,8 @@ model:
 training:
   epochs: 25
   batch_size: 64
-  sequence_length: 10
-  lstm_units: 128 
+  sequence_length: 7
+  lstm_units: 128
   dense_units: 64
   dropout_rate: 0.3
   learning_rate: 0.005
@@ -33,6 +33,4 @@ datasets:
     frequency: "M"
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
-      - "U.S."
-      - "Alaska"
-      - "Kansas"
+      - "*"
