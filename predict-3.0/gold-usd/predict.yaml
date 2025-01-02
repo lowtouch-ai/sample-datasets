@@ -23,9 +23,7 @@ datasets:
     frequency: "1D"
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
-      - "Price"
-      - "High"
-      - "Low"
+      - "*"
 
     target_column: "Price"
 
