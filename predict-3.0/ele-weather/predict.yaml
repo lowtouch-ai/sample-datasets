@@ -23,9 +23,7 @@ datasets:
     frequency: "1D"
     datetime_format: "%Y-%m-%d"
     columns:
-      - "Minimum Temperature"
-      - "Maximum Temperature"
-      - "Temperature"
+      - "*" # All columns
    
 
   electricity.csv:

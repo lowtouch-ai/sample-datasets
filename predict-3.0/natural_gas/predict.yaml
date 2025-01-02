@@ -2,10 +2,11 @@ model:
   include_weekends: True
   steps_to_predict: 3
 
+
 training:
   epochs: 25
   batch_size: 64
-  sequence_length: 7
+  sequence_length: 5
   lstm_units: 128
   dense_units: 64
   dropout_rate: 0.3
@@ -33,4 +34,4 @@ datasets:
     frequency: "M"
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
-      - "*"
+      - "U.S."

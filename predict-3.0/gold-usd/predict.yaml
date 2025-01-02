@@ -23,7 +23,9 @@ datasets:
     frequency: "1D"
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
-      - "*"
+      - "Price"
+      - "High"
+      - "Low"
 
     target_column: "Price"
 
@@ -33,7 +35,18 @@ datasets:
     frequency: "1D"
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
-      - "*"
-     
+      - "Open"
+      - "High"
+      - "Adj Close"
+    
+  custom.csv:
+    file_path: "custom.csv"
+    date_column: "Date"
+    frequency: "1D"
+    datetime_format: "%Y-%m-%d" # Matches your dataset
+    columns:
+      - "Holiday"
+      - "WeekDay"
+      - "Weekend"
 
 
