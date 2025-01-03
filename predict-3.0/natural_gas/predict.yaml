@@ -2,10 +2,11 @@ model:
   include_weekends: True
   steps_to_predict: 3
 
+
 training:
-  epochs: 5
+  epochs: 25
   batch_size: 64
-  sequence_length: 10
+  sequence_length: 5
   lstm_units: 128
   dense_units: 64
   dropout_rate: 0.3
@@ -34,5 +35,3 @@ datasets:
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
       - "U.S."
-      - "Alaska"
-      - "Kansas"

@@ -4,7 +4,7 @@ model:
 
 training:
   epochs: 20
-  batch_size: 64
+  batch_size: 32
   sequence_length: 10
   lstm_units: 128
   dense_units: 64
@@ -24,8 +24,7 @@ datasets:
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
       - "Price"
-      - "High"
-      - "Low"
+
     target_column: "Price"
 
   inr_to_usd_exchange_rate.csv:
@@ -36,6 +35,16 @@ datasets:
     columns:
       - "Open"
       - "High"
-      - "Low"
+      - "Adj Close"
+    
+  days.csv:
+    file_path: "days.csv"
+    date_column: "Date"
+    frequency: "1D"
+    datetime_format: "%Y-%m-%d" # Matches your dataset
+    columns:
+      - "Holiday"
+      - "WeekDay"
+      - "Weekend"
 
 
