@@ -1,0 +1,40 @@
+model:
+  include_weekends: True
+  steps_to_predict: 72
+
+training:
+  epochs: 20
+  batch_size: 128
+  sequence_length: 24
+  lstm_units: 128
+  dense_units: 64
+  dropout_rate: 0.3
+  learning_rate: 0.003
+  loss_function: "huber"
+
+  target_column: "trip_count"
+  date_column: "Date"
+  target_file: "nyc_trip.csv"
+
+datasets:
+  nyc_trip.csv:
+    file_path: "nyc_trip.csv"
+    date_column: "Date"
+    frequency: "1H"
+    datetime_format: "%d-%m-%Y %H:%M" # Matches your dataset
+    columns:
+      - "trip_count"
+      
+    target_column: "trip_count"
+
+  nyc_weather.csv:
+    file_path: "nyc_weather.csv"
+    date_column: "date"
+    frequency: "1H"
+    datetime_format: "%Y %m %d %H:%M:%S" # Matches your dataset
+    columns:
+      - "temperature_2m (°C)"
+      - "rain (mm)"
+      - "cloudcover (%)"
+
+

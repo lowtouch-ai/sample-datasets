@@ -1,7 +1,0 @@
-cpu_cores_used: 8
-final_loss: 0.03229874591282508
-mape: 8.4845000946123
-num_rows:
-  test: 20
-  train: 23972
-training_time: 324.72
