@@ -3,9 +3,9 @@ model:
   steps_to_predict: 3
 
 training:
-  epochs: 20
-  batch_size: 32
-  sequence_length: 10
+  epochs: 40
+  batch_size: 64
+  sequence_length: 14
   lstm_units: 128
   dense_units: 64
   dropout_rate: 0.3
@@ -37,14 +37,14 @@ datasets:
       - "High"
       - "Adj Close"
     
-  days.csv:
-    file_path: "days.csv"
-    date_column: "Date"
-    frequency: "1D"
-    datetime_format: "%Y-%m-%d" # Matches your dataset
-    columns:
-      - "Holiday"
-      - "WeekDay"
-      - "Weekend"
+  # days.csv:
+  #   file_path: "days.csv"
+  #   date_column: "Date"
+  #   frequency: "1D"
+  #   datetime_format: "%Y-%m-%d" # Matches your dataset
+  #   columns:
+  #     - "Holiday"
+  #     - "WeekDay"
+  #     - "Weekend"
 
 
