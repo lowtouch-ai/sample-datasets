@@ -36,3 +36,15 @@ datasets:
       - "temperature_2m (°C)"
       - "winddirection_10m (°)"
       - "windspeed_10m (km/h)"
+      
+  # date_info.csv:
+  #   file_path: "date_info.csv"
+  #   date_column: "Date"
+  #   frequency: "1H"
+  #   datetime_format: "%Y-%m-%d %H:%M:%S" # Matches your dataset
+  #   columns:
+  #     - "Holiday"
+  #     - "WeekDay"
+  #     - "Weekend"
+
+
