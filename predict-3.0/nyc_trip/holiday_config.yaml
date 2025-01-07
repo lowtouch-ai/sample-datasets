@@ -1,7 +1,7 @@
 datasets:
-  primary_file: "electricity.csv"  # Path to the primary dataset
+  primary_file: "nyc_weather.csv"  # Path to the primary dataset
   holiday_file: "holiday_date.csv"            # Path to the holiday dataset
-  primary_date_column: "DateTime"         # Date column in primary dataset
+  primary_date_column: "date"         # Date column in primary dataset
   holiday_date_column: "Date"
   output_file: "date_info.csv"            # Output file for date info
 

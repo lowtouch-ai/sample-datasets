@@ -4,12 +4,12 @@ model:
 
 training:
   epochs: 20
-  batch_size: 128
+  batch_size: 72
   sequence_length: 24
   lstm_units: 128
   dense_units: 64
   dropout_rate: 0.3
-  learning_rate: 0.003
+  learning_rate: 0.005
   loss_function: "huber"
 
   target_column: "trip_count"
@@ -34,7 +34,17 @@ datasets:
     datetime_format: "%Y %m %d %H:%M:%S" # Matches your dataset
     columns:
       - "temperature_2m (°C)"
-      - "rain (mm)"
-      - "cloudcover (%)"
+      - "winddirection_10m (°)"
+      - "windspeed_10m (km/h)"
+      
+  # date_info.csv:
+  #   file_path: "date_info.csv"
+  #   date_column: "Date"
+  #   frequency: "1H"
+  #   datetime_format: "%Y-%m-%d %H:%M:%S" # Matches your dataset
+  #   columns:
+  #     - "Holiday"
+  #     - "WeekDay"
+  #     - "Weekend"
 
 
