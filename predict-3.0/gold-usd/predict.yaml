@@ -4,8 +4,8 @@ model:
 
 training:
   epochs: 40
-  batch_size: 32
-  sequence_length: 10
+  batch_size: 64
+  sequence_length: 14
   lstm_units: 128
   dense_units: 64
   dropout_rate: 0.3
@@ -36,7 +36,6 @@ datasets:
       - "Open"
       - "High"
       - "Adj Close"
-    
   # days.csv:
   #   file_path: "days.csv"
   #   date_column: "Date"
