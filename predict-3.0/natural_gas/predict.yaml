@@ -2,11 +2,10 @@ model:
   include_weekends: True
   steps_to_predict: 3
 
-
 training:
   epochs: 25
-  batch_size: 64
-  sequence_length: 5
+  batch_size: 16
+  sequence_length: 8
   lstm_units: 128
   dense_units: 64
   dropout_rate: 0.3

@@ -3,14 +3,14 @@ model:
   steps_to_predict: 72
 
 training:
-  epochs: 50
-  batch_size: 16
-  sequence_length: 10
+  epochs: 20
+  batch_size: 72
+  sequence_length: 16
   lstm_units: 128
   dense_units: 64
   dropout_rate: 0.3
   learning_rate: 0.005
-  loss_function: "mean_squared_error"
+  loss_function: "huber"
 
   target_column: "TrafficCount"
   date_column: "Timestamp"
