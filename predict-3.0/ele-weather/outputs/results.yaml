@@ -1,6 +1,6 @@
 electricity.csv_rows: 24000
-error_percentage: 3.531571943424352
-model_accuracy: 96.46842805657565
+error_percentage: 2.5215836329870083
+model_accuracy: 97.47841636701298
 num_cores_used: 6
-total_training_time: 9.435792446136475
+total_training_time: 85.03389477729797
 weather.csv_rows: 1000
