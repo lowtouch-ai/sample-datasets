@@ -4,9 +4,9 @@ model:
   
 
 training:
-  epochs: 4
+  epochs: 10
   batch_size: 64
-  sequence_length: 4
+  sequence_length: 32
   lstm_units: 64
   dense_units: 128
   dropout_rate: 0.1
@@ -23,7 +23,9 @@ datasets:
     frequency: "1D"
     datetime_format: "%Y-%m-%d"
     columns:
-      - "*" # All columns
+      - "Temperature" # All columns
+      - "Wind Speed"
+      - "Relative Humidity"
    
 
   electricity.csv:

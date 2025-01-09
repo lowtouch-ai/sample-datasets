@@ -9,8 +9,8 @@ training:
   lstm_units: 128
   dense_units: 64
   dropout_rate: 0.3
-  learning_rate: 0.005
-  loss_function: "huber"
+  learning_rate: 0.001
+  loss_function: "mean_squared_logarithmic_error"
 
   target_column: "Price"
   date_column: "Date"
@@ -34,3 +34,4 @@ datasets:
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
       - "U.S."
+      - "Alaska"

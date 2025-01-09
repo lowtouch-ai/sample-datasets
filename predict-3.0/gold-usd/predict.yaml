@@ -3,13 +3,13 @@ model:
   steps_to_predict: 3
 
 training:
-  epochs: 40
-  batch_size: 64
-  sequence_length: 14
+  epochs: 20
+  batch_size: 48
+  sequence_length: 16
   lstm_units: 128
   dense_units: 64
   dropout_rate: 0.3
-  learning_rate: 0.005
+  learning_rate: 0.001
   loss_function: "huber"
 
   target_column: "Price"
