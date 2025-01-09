@@ -1,0 +1,33 @@
+
+
+# Input file configuration
+input_file: /appz/sampledata/predict-3.0/ev_sales/EV_Dataset.csv
+
+# Output file configuration
+output_file: "ev_sales_processed.csv"  # Name of the processed output file
+
+# Date filtering
+date_column: "Date"  # Column containing the date values
+start_date: "2018-01-01"  # Start date for filtering (format: dd-mm-yyyy)
+end_date: "2022-01-07"    # End date for filtering (format: dd-mm-yyyy)
+date_format: "%Y-%m-%d"  # Desired format for the date column in the output
+
+# Type casting configuration (optional)
+type_casting:
+  EV_Sales_Quantity: float  # Cast EV_Sales_Quantity column to float type
+  Vehicle_Sales: int  # Cast Vehicle_Sales column to integer type
+
+# Rename columns (optional)
+rename_columns:
+  EV_Sales_Quantity: 'ev_quantity'
+
+
+# Filters (conditions to apply to the dataset)
+filters:
+  - condition: "State == 'Maharashtra'"  # Filter for Maharashtra state
+  - condition: "Vehicle_Class == 'E-RICKSHAW(P)'"  # Filter for E-Rickshaw(P) class
+
+# Required columns (columns to keep after processing)
+required_columns: ['Date', 'State', 'Vehicle_Class', 'Vehicle_Category', 'ev_quantity']
+
+
