@@ -1,5 +1,3 @@
-
-
 # Input file configuration
 input_file: /appz/sampledata/predict-3.0/ev_sales/EV_Dataset.csv
 
@@ -8,8 +6,8 @@ output_file: "ev_sales_processed.csv"  # Name of the processed output file
 
 # Date filtering
 date_column: "Date"  # Column containing the date values
-start_date: "2018-01-01"  # Start date for filtering (format: dd-mm-yyyy)
-end_date: "2022-01-07"    # End date for filtering (format: dd-mm-yyyy)
+start_date: "2018-01-01"  # Start date for filtering (format: yyyy-mm-dd)
+end_date: "2022-01-07"    # End date for filtering (format: yyyy-mm-dd)
 date_format: "%Y-%m-%d"  # Desired format for the date column in the output
 
 # Type casting configuration (optional)
@@ -19,8 +17,7 @@ type_casting:
 
 # Rename columns (optional)
 rename_columns:
-  EV_Sales_Quantity: 'ev_quantity'
-
+  EV_Sales_Quantity: 'ev_quantity'  # Rename EV_Sales_Quantity to ev_quantity
 
 # Filters (conditions to apply to the dataset)
 filters:
@@ -30,4 +27,6 @@ filters:
 # Required columns (columns to keep after processing)
 required_columns: ['Date', 'State', 'Vehicle_Class', 'Vehicle_Category', 'ev_quantity']
 
-
+# Warning message configuration for large datasets
+warning_threshold: 50000  # Threshold for the number of rows
+warning_message: "Warning: Your raw dataset has more than 50,000 rows."  # Message to display
