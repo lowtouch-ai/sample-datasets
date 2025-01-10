@@ -3,9 +3,9 @@ model:
   steps_to_predict: 3
 
 training:
-  epochs: 20
+  epochs: 40
   batch_size: 64
-  sequence_length: 10
+  sequence_length: 14
   lstm_units: 128
   dense_units: 64
   dropout_rate: 0.3
@@ -24,8 +24,7 @@ datasets:
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
       - "Price"
-      - "High"
-      - "Low"
+
     target_column: "Price"
 
   inr_to_usd_exchange_rate.csv:
@@ -36,6 +35,15 @@ datasets:
     columns:
       - "Open"
       - "High"
-      - "Low"
+      - "Adj Close"
+  # days.csv:
+  #   file_path: "days.csv"
+  #   date_column: "Date"
+  #   frequency: "1D"
+  #   datetime_format: "%Y-%m-%d" # Matches your dataset
+  #   columns:
+  #     - "Holiday"
+  #     - "WeekDay"
+  #     - "Weekend"
 
 
