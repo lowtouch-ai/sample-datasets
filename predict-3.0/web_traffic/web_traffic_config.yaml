@@ -1,0 +1,30 @@
+# Input file configuration
+input_file: "/appz/sampledata/predict-3.0/web_traffic/web_traffic (1).csv"
+
+# Output file configuration
+output_file: "web_traffic_processed.csv"
+
+# Date configuration
+date_column: "Timestamp"  # Original column name in the dataset
+
+rename_columns:
+  Timestamp: "Date"
+  # Rename 'Timestamp' to 'Date'
+
+start_date: "2020-01-20 00:00:00"
+end_date: "2020-05-17 12:30:00"
+date_format: "%Y-%m-%d %H:%M:%S"  # Adapt for 'YYYY-MM-DD HH:MM:SS' format
+
+# Type casting
+type_casting: {}
+
+# Filters
+filters: {}
+
+# Columns to keep
+required_columns: ["Date", "TrafficCount"]
+
+# Warnings
+warning_threshold: 50000
+warning_message: "Warning: Your raw dataset has more than 50,000 rows."
+
