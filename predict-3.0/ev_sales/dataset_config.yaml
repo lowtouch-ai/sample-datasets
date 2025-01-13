@@ -1,8 +1,12 @@
 # Input file configuration
 input_file: /appz/sampledata/predict-3.0/ev_sales/EV_Dataset.csv
+input_delimiter: ","  # Delimiter for the input file
+input_encoding: "utf-8"  # Encoding for the input file
 
 # Output file configuration
 output_file: "ev_sales_processed.csv"  # Name of the processed output file
+output_delimiter: ","  # Delimiter for the output file
+output_encoding: "utf-8"  # Encoding for the output file
 
 # Date filtering
 date_column: "Date"  # Column containing the date values
@@ -18,6 +22,15 @@ type_casting:
 # Rename columns (optional)
 rename_columns:
   EV_Sales_Quantity: 'ev_quantity'  # Rename EV_Sales_Quantity to ev_quantity
+
+combine_columns:
+  new_column_name: "Vehicle_Category"  # New column name
+  columns_to_combine: ["Vehicle_Type", "Vehicle_Class"]  # Columns to combine
+
+split_column: 
+  column_to_split: "Vehicle_Category"  # Column to split
+  delimiter: "-"  # Delimiter to split the column
+  new_column_names: ["Vehicle_Type", "Vehicle_Class"]  # New column names
 
 # Filters (conditions to apply to the dataset)
 filters:
