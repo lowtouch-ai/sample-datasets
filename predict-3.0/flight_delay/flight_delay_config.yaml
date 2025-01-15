@@ -1,4 +1,4 @@
-input_file: /appz/sampledata/predict-3.0/flight_delay/filtered_flight_data.csv
+input_file: /appz/sampledata/predict-3.0/flight_delay/flight_data.csv
 input_delimiter: ","  # Delimiter for the input file
 input_encoding: "utf-8"  # Encoding for the input file
 

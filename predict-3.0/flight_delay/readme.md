@@ -29,8 +29,8 @@ flight_delay_dataset.csv
 #### Time Period:
 - **Start**: 2014-01-01.
 - **End**: 2016-12-25.
-- **Frequency**: Daily data(1 day interval).
-- **No. of Rows**: 1064
+- **Frequency**: Daily data.
+- **No. of Rows**: 1604
 
 #### Example Rows:
 

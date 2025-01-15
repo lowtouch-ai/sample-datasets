@@ -9,8 +9,8 @@ output_encoding: "utf-8"  # Encoding for the output file
 
 # Date filtering
 date_column: "datetime"  # Column containing the date values
-start_date: "01-01-2014 00:00"  # Start date for filtering (format: yyyy-mm-dd)
-end_date: "27-12-2016 12:00"    # End date for filtering (format: yyyy-mm-dd)
+start_date: "2014-01-01 00:00"  # Start date for filtering (format: yyyy-mm-dd)
+end_date: "2016-12-27 12:00"    # End date for filtering (format: yyyy-mm-dd)
 date_format: "%Y-%m-%d %H-%M"  # Desired format for the date column in the output
 
 
