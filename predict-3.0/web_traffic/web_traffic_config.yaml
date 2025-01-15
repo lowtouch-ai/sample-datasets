@@ -1,5 +1,5 @@
 # Input file configuration
-input_file: "/appz/sampledata/predict-3.0/web_traffic/web_traffic (1).csv"
+input_file: "/appz/sampledata/predict-3.0/web_traffic/web_traffic.csv"
 
 # Output file configuration
 output_file: "web_traffic_processed.csv"

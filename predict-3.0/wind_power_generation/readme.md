@@ -22,7 +22,7 @@ Contains hourly data on wind turbine power generation. It provides essential ins
 
 **Time Period:**  
 
-- **Start:** 2017-01-02 00:00  
+- **Start:** 2013-01-02 00:00 
 - **End:** 2016-12-30 12:00.
 - **No. of rows** 35017
 - **Frequency:** Hourly  
@@ -54,8 +54,8 @@ Contains hourly meteorological data recorded from the same locations as the wind
 
 **Time Period:**  
 
-- **Start:** 2017-01-02 00:00  
-- **End:** 2016-12-31 12:00.  
+- **Start:** 2013-01-02 00:00 
+- **End:** 2016-12-31 12:00.  (1 day extra)
 - **No. of rows** 35041
 - **Frequency:** Hourly  
 
