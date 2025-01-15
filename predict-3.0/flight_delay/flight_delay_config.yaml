@@ -1,0 +1,26 @@
+input_file: /appz/sampledata/predict-3.0/flight_delay/filtered_flight_data.csv
+input_delimiter: ","  # Delimiter for the input file
+input_encoding: "utf-8"  # Encoding for the input file
+
+# Output file configuration
+output_file: "flight_delay_processed.csv"  # Name of the processed output file
+output_delimiter: ","  # Delimiter for the output file
+output_encoding: "utf-8"  # Encoding for the output file
+
+# Date filtering
+date_column: "FlightDate"  # Column containing the date values
+start_date: "2014-01-01"  # Start date for filtering (format: yyyy-mm-dd)
+end_date: "2016-12-25"    # End date for filtering (format: yyyy-mm-dd)
+date_format: "%Y-%m-%d"  # Desired format for the date column in the output
+
+
+# Rename columns (optional)
+rename_columns:
+  FlightDate: 'Date'  # Rename EV_Sales_Quantity to ev_quantity
+
+# Required columns (columns to keep after processing)
+required_columns: null
+
+# Warning message configuration for large datasets
+warning_threshold: 50000  # Threshold for the number of rows
+warning_message: "Warning: Your raw dataset has more than 50,000 rows."  # Message to display
