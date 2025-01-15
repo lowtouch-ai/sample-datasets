@@ -4,12 +4,12 @@ model:
 
 training:
   epochs: 25
-  batch_size: 16
-  sequence_length: 8
+  batch_size: 64
+  sequence_length: 32
   lstm_units: 128
   dense_units: 64
   dropout_rate: 0.3
-  learning_rate: 0.001
+  learning_rate: 0.01
   loss_function: "mean_squared_logarithmic_error"
 
   target_column: "Price"

@@ -3,13 +3,13 @@ model:
   steps_to_predict: 3
 
 training:
-  epochs: 20
-  batch_size: 48
-  sequence_length: 16
+  epochs: 15
+  batch_size: 64
+  sequence_length: 32
   lstm_units: 128
   dense_units: 64
   dropout_rate: 0.3
-  learning_rate: 0.001
+  learning_rate: 0.005
   loss_function: "huber"
 
   target_column: "Price"
@@ -24,8 +24,9 @@ datasets:
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
       - "Price"
-
+      - "Chg%"  # Ensure this column is included
     target_column: "Price"
+    suffix: "gold"
 
   inr_to_usd_exchange_rate.csv:
     file_path: "inr_to_usd_exchange_rate.csv"
@@ -33,9 +34,8 @@ datasets:
     frequency: "1D"
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
-      - "Open"
-      - "High"
-      - "Adj Close"
+      - "*"
+    suffix: "inr_to_usd"
   # days.csv:
   #   file_path: "days.csv"
   #   date_column: "Date"

@@ -4,8 +4,8 @@ model:
 
 training:
   epochs: 20
-  batch_size: 72
-  sequence_length: 16
+  batch_size: 128
+  sequence_length: 72
   lstm_units: 128
   dense_units: 64
   dropout_rate: 0.3
