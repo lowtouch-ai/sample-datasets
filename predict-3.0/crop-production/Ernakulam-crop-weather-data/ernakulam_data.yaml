@@ -1,7 +1,7 @@
 fetch_data:
   base_url: "https://api.worldweatheronline.com/premium/v1/past-weather.ashx"
   params:
-    key: "be867f2ade6b479db9591834251001"
+    key: "fc163aec8a8f4293b87122927251001"
     q: "Ernakulam, Kerala"
     format: "json"
     date: "2009-01-01"
