@@ -1,16 +1,16 @@
 model:
   include_weekends: True
   steps_to_predict: 3
-  noise_factor: 0
+
 
 training:
-  epochs: 50
+  epochs: 20
   batch_size: 32
-  sequence_length: 8
+  sequence_length: 16
   lstm_units: 128
   dense_units: 64
   dropout_rate: 0.3
-  learning_rate: 0.001
+  learning_rate: 0.01
   loss_function: "huber"
 
   target_column: "EV_Sales_Quantity"
@@ -26,6 +26,7 @@ datasets:
     columns:
       - "EV_Sales_Quantity"
     target_column: "EV_Sales_Quantity"
+
 
   petrol_price.csv:
     file_path: "petrol_price.csv"

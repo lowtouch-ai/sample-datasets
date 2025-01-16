@@ -3,14 +3,14 @@ model:
   steps_to_predict: 72
 
 training:
-  epochs: 20
-  batch_size: 128
-  sequence_length: 72
-  lstm_units: 128
+  epochs: 50
+  batch_size: 64
+  sequence_length: 32
+  lstm_units: 64
   dense_units: 64
   dropout_rate: 0.3
-  learning_rate: 0.005
-  loss_function: "huber"
+  learning_rate: 0.01
+  loss_function: "mse"
 
   target_column: "TrafficCount"
   date_column: "Timestamp"
@@ -34,4 +34,6 @@ datasets:
     datetime_format: "%Y-%m-%d" # Matches your dataset
     columns:
       - "Returning.Visits"
+      - "Page.Loads"
+      - "Unique.Visits"
    

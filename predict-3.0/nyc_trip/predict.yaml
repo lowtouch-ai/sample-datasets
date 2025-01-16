@@ -24,8 +24,7 @@ datasets:
     datetime_format: "%d-%m-%Y %H:%M" # Matches your dataset
     columns:
       - "trip_count"
-      
-    target_column: "trip_count"
+    suffix: "trip"
 
   nyc_weather.csv:
     file_path: "nyc_weather.csv"
@@ -36,6 +35,7 @@ datasets:
       - "temperature_2m (°C)"
       - "winddirection_10m (°)"
       - "windspeed_10m (km/h)"
+    suffix: "weather"
       
   # date_info.csv:
   #   file_path: "date_info.csv"
@@ -46,5 +46,6 @@ datasets:
   #     - "Holiday"
   #     - "WeekDay"
   #     - "Weekend"
+  #   suffix: "date_info"
 
 
