@@ -1,0 +1,23 @@
+fetch_data:
+  base_url: "https://api.worldweatheronline.com/premium/v1/past-weather.ashx"
+  params:
+    key: "be867f2ade6b479db9591834251001"
+    q: "Pathanamthitta, Kerala"
+    format: "json"
+    date: "2009-01-01"
+    enddate: "2024-12-31"
+    tp: 24
+  output_file: "pathanamthitta_weather_data.csv"
+  data_key: "data.weather"
+  date_range_key: "date"
+  end_date_key: "enddate"
+  columns_to_save: ["Date", "maxtempC", "mintempC", "avgtempC", "totalPrecipMM"]
+
+clean_data:
+  input_file: "pathanamthitta_market.csv"
+  output_file: "pathanamthitta_market_clean.csv"
+  start_date: "2009-01-01"
+  end_date: "2024-12-31"
+  date_col: "Reported Date"
+  delimiter: ","
+  encoding: "utf-8"
