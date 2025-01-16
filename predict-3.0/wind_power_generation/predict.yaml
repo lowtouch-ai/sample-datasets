@@ -1,0 +1,35 @@
+model:
+  steps_to_predict: 72
+  include_weekends: True
+  
+
+training:
+  epochs: 50
+  batch_size: 128
+  sequence_length: 64
+  lstm_units: 256
+  dense_units: 128
+  dropout_rate: 0.3
+  learning_rate: 0.01
+  loss_function: huber
+  target_column: "Power"
+  date_column: "Time"
+  target_file: "wind_generation.csv"
+
+datasets:
+  wind_generation.csv:
+    file_path: "wind_generation.csv"
+    date_column: "Time"
+    frequency: "1H"
+    datetime_format: "%d-%m-%Y %H:%M"
+    columns:
+      - "Power" 
+   
+
+  weather_processed.csv:
+    file_path: "wind_weather.csv"
+    date_column: "Time"
+    frequency: "1H"
+    datetime_format: "%d-%m-%Y %H:%M"
+    columns:
+      - "WS_10m"

@@ -1,0 +1,35 @@
+model:
+  steps_to_predict: 72
+  include_weekends: True
+  
+
+training:
+  epochs: 30
+  batch_size: 128
+  sequence_length: 128
+  lstm_units: 256
+  dense_units: 64
+  dropout_rate: 0.2
+  learning_rate: 0.001
+  loss_function: mse
+  target_column: "CRSDepTime"
+  date_column: "Date"
+  target_file: "flight_delay_processed.csv"
+
+datasets:
+  flight_delay_processed.csv:
+    file_path: "flight_delay_processed.csv"
+    date_column: "Date"
+    frequency: "1D"
+    datetime_format: "%Y-%m-%d"
+    columns:
+      - "CRSDepTime" 
+
+  Weather_processed.csv:
+    file_path: "Weather_processed.csv"
+    date_column: "datetime"
+    frequency: "1H"
+    datetime_format: "%Y-%m-%d %H-%M"
+    columns:
+      - "*"
+
