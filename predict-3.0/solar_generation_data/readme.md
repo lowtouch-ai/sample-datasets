@@ -20,8 +20,6 @@ Contains observations from the sensor panel attached to a solar plant, capturing
 
 ## Columns
 DATE_TIME
-PLANT_ID
-SOURCE_KEY
 DC_POWER
 DAILY_YIELD
 TOTAL_YIELD
@@ -44,12 +42,10 @@ Contains observations from the inverter of a solar plant, recording DC and AC po
 - **Start**: 15-05-2020
 - **End**: 05-06-2020
 - **Time Period**: 22 days
-- **No. of Rows**: 2011
+- **No. of Rows**: 2014
 
 ## Column
 DATE_TIME
-PLANT_ID
-SOURCE_KEY
 AMBIENT_TEMPERATURE
 MODULE_TEMPERATURE
 IRRADIATION
