@@ -5,19 +5,19 @@
 
 This README provides details about the two datasets used for analyzing and predicting flight delays and their relationship to historical weather data.
 
-**`flight_delay_prediction.csv`**  
-**`los_angles_weather.csv`**  
+**`flight_delay_processed.csv`**  
+**`weather_processed.csv`**  
 
 **STATUS**  
 **Completed** 
 
-### Dataset 1: Flight Delay Prediction (Primary Dataset)
+### Dataset 1: Flight Delay  (Primary Dataset)
 
 #### Description:
 Contains daily data on flight schedules and delays. It includes essential features for understanding and predicting flight delays.
 
 #### File Name:
-flight_delay_dataset.csv
+flight_delay_processed.csv
 
 #### Columns:
 - **FlightDate**: The date of the flight.
@@ -42,13 +42,13 @@ FlightDate,OriginCityName,CRSDepTime,DepTime,DepDelay
 
 ---
 
-### Dataset 2: Historical Weather Data (Secondary Dataset)
+### Dataset 2:  Weather Data (Secondary Dataset)
 
 #### Description:
 Contains hourly historical weather data for various locations. The data is essential for analyzing the impact of weather conditions on flight delays.
 
 #### File Name:
-Los_angles_weather.csv
+weather_processed.csv
 
 #### Columns:
 - **datetime**: The date and time of the weather observation.

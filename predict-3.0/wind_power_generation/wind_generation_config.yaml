@@ -1,5 +1,5 @@
 # Input file configuration
-input_file: /appz/sampledata/predict-3.0/wind_power_generation/wind_generation.csv  # Path to the input file
+input_file: /appz/sampledata/predict-3.0/wind_power_generation/wind generation.csv  # Path to the input file
 input_delimiter: ","  # Delimiter for the input file
 input_encoding: "utf-8"  # Encoding for the input file
 

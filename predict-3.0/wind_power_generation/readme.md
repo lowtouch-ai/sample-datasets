@@ -2,17 +2,17 @@
 
 This README provides details about the two datasets used for analyzing and forecasting wind turbine power generation:  
 
-**`wind_generation.csv`**  
-**`WeatherData.csv`**  
+**`wind_processed.csv`**  
+**`Weather_processed.csv`**  
 
 **STATUS**  
 **Completed**  
 
-## Dataset 1: Wind Turbine Power Generation Data  
+## Dataset 1: Wind Power Generation Data  
 **Description:**  
 Contains hourly data on wind turbine power generation. It provides essential insights for understanding and predicting wind energy production trends across four different locations.  
 
-**File Name:** `wind_generation.csv`  
+**File Name:** `wind_processed.csv`  
 
 **Columns:**  
 
@@ -37,11 +37,11 @@ Time,  Power
 
 ---
 
-## Dataset 2: Weather Data for Wind Turbine Locations  
+## Dataset 2: Weather Data   
 **Description:**  
 Contains hourly meteorological data recorded from the same locations as the wind turbines. Includes key variables such as temperature, wind speed, and wind direction, which directly impact wind power generation.  
 
-**File Name:** `WeatherData.csv`  
+**File Name:** `Weather_processed.csv`  
 
 **Columns:**  
 
