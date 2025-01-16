@@ -1,0 +1,45 @@
+# Input file configuration
+input_file: /appz/sampledata/predict-3.0/ev_sales/EV_Dataset.csv
+input_delimiter: ","  # Delimiter for the input file
+input_encoding: "utf-8"  # Encoding for the input file
+
+# Output file configuration
+output_file: "ev_sales_processed.csv"  # Name of the processed output file
+output_delimiter: ","  # Delimiter for the output file
+output_encoding: "utf-8"  # Encoding for the output file
+
+# Date filtering
+date_column: "Date"  # Column containing the date values
+start_date: "2018-01-01"  # Start date for filtering (format: yyyy-mm-dd)
+end_date: "2022-01-07"    # End date for filtering (format: yyyy-mm-dd)
+date_format: "%Y-%m-%d"  # Desired format for the date column in the output
+
+# Type casting configuration (optional)
+type_casting:
+  EV_Sales_Quantity: float  # Cast EV_Sales_Quantity column to float type
+  Vehicle_Sales: int  # Cast Vehicle_Sales column to integer type
+
+# Rename columns (optional)
+rename_columns:
+  EV_Sales_Quantity: 'ev_quantity'  # Rename EV_Sales_Quantity to ev_quantity
+
+combine_columns:
+  new_column_name: "Vehicle_Category"  # New column name
+  columns_to_combine: ["Vehicle_Type", "Vehicle_Class"]  # Columns to combine
+
+split_column: 
+  column_to_split: "Vehicle_Category"  # Column to split
+  delimiter: "-"  # Delimiter to split the column
+  new_column_names: ["Vehicle_Type", "Vehicle_Class"]  # New column names
+
+# Filters (conditions to apply to the dataset)
+filters:
+  - condition: "State == 'Maharashtra'"  # Filter for Maharashtra state
+  - condition: "Vehicle_Class == 'E-RICKSHAW(P)'"  # Filter for E-Rickshaw(P) class
+
+# Required columns (columns to keep after processing)
+required_columns: ['Date', 'State', 'Vehicle_Class', 'Vehicle_Category', 'ev_quantity']
+
+# Warning message configuration for large datasets
+warning_threshold: 50000  # Threshold for the number of rows
+warning_message: "Warning: Your raw dataset has more than 50,000 rows."  # Message to display

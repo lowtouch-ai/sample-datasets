@@ -1,42 +1,69 @@
-# SampleDataset: Curated Datasets and Prompts for AI and ML Testing  
 
-Welcome to the **SampleDataset** repository, a comprehensive collection of datasets and prompts tailored for testing and experimenting with machine learning (ML) models, including Long Short-Term Memory (LSTM) networks and large language models (LLMs).  
+# README for NYC Yellow Taxi Trip Data
 
-This repository is an initiative by **lowtouch.ai**, designed to empower data scientists, machine learning engineers, and researchers by providing a centralized, curated repository of datasets and prompts.  
+This README provides details about the two datasets used for analyzing `dropoff_datetime`:
 
-## What’s Inside  
+ **nyc_yellow_taxi_trip**
+ 
+ **nyc_weather Data.csv**
 
-### 1. **Datasets**  
-- **LSTM Datasets**: Optimized datasets for time-series modeling and sequence-based machine learning tasks.  
-- **Sample Datasets**: A variety of sample data points to test the robustness and flexibility of different ML models.  
-- **Curated, Scrubbed, and Cleaned Data**: Preprocessed datasets that are ready to use for experimentation and rapid prototyping.  
 
-### 2. **Prompts for LLM Testing**  
-- Predefined prompts for testing various large language models (LLMs).  
-- Prompts designed to test specific capabilities, such as reasoning, summarization, sentiment analysis, and more.  
-- Versatile use cases spanning natural language processing, code generation, and conversational AI.  
+**Status**
+   Completed
 
-## Why Use This Repository?  
+## Primary Data: NYC Yellow Taxi Trip Data
 
-- **Accelerated Testing**: Skip the time-consuming task of data preparation and dive straight into testing your models.  
-- **Diverse Use Cases**: Experiment with datasets and prompts designed for a wide array of AI and ML scenarios.  
-- **Community-Driven**: Be part of a growing community committed to advancing AI innovation.  
+**Description**: 
+This dataset contains trip-level information from New York City’s Yellow Taxis, detailing count of every one hour. It is useful for analyzing taxi demand.
 
-## About lowtouch.ai  
+**File Name**: `nyc_trip.csv`
 
-At **lowtouch.ai**, we specialize in creating low-maintenance, ready-to-use AI solutions for private and enterprise infrastructure. From predictive analytics and anomaly detection to SRE and helpdesk automation, we empower organizations to leverage cutting-edge AI technology without the hassle. Our **virtual AI appliances** offer unmatched speed, flexibility, and ease of integration for diverse use cases.  
+**Columns**:
+- `Date`: The date and time when the meter was engaged.
+- `count`: The number of trips happened in the particular time period.
 
-## How to Contribute  
+**Time Period**:
+- **Start**: 2016-01-01 00:00
+- **End**: 2016-01-30 23:00
+- **No. of Days**: 30
+- **No. of Rows**: 721
 
-We welcome contributions to this repository! If you have a dataset or prompt that you believe could benefit the community, feel free to submit a pull request. Let’s build something great together!  
+**Frequency**:
+- Hourly
 
-## Stay Connected  
+**Example Rows**:
+```
+Date,count
+2016-01-01 00:00,25270
+```
 
-If you have any questions, want to learn more about **lowtouch.ai**, or are interested in partnering with us, don’t hesitate to reach out!  
+## Secondary Data: NYC Weather Data
 
-**📧 Contact us:** [info@lowtouch.ai](mailto:info@lowtouch.ai)  
-**🌐 Visit our website:** [www.lowtouch.ai](https://lowtouch.ai)  
+**Description**: 
+This dataset provides daily weather conditions for New York City. It includes detailed temperature, precipitation, and wind data. It can be used for weather trend analysis, forecasting, and understanding how weather impacts transportation systems like taxis.
 
----
+**File Name**: `nyc_weather.csv`
 
-Join us in shaping the future of AI and ML testing with **SampleDataset**. Explore, innovate, and make an impact today!  
+**Columns**:
+- `time`: The date of the weather observation.
+- `temperature`: The maximum temperature for the day (in °C).
+- `precipitation`: Total precipitation for the day (in mm).
+- `rain`: Only liquid precipitation of the preceding hour including local showers and rain.
+- `Cloudcover (%)`: Total cloud cover as an area fraction.
+- `windspeed_10m (km/h)`: Wind speed at 10 meters above ground.
+- `winddirection_10m (°)`: Wind direction at 10 meters above ground.
+
+**Time Period**:
+- **Start**: 2016-01-01T00:00
+- **End**: 2016-02-03T01:00
+- **No. of Days**: 34 (4 extra days from Jan 31 to Feb 3)
+- **No. of Rows**: 795
+
+**Frequency**:
+- Hourly
+
+**Example Rows**:
+```
+time,temperature_2m,precipitation,rain,cloudcover,windspeed_10m,winddirection_10m
+2016-01-01T00:00,7.6,0,0,69,10,296
+```
