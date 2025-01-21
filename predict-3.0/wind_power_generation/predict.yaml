@@ -4,13 +4,13 @@ model:
   
 
 training:
-  epochs: 50
-  batch_size: 128
-  sequence_length: 64
-  lstm_units: 256
-  dense_units: 128
+  epochs: 20
+  batch_size: 72
+  sequence_length: 24
+  lstm_units: 128
+  dense_units: 64
   dropout_rate: 0.3
-  learning_rate: 0.01
+  learning_rate: 0.005
   loss_function: huber
   target_column: "Power"
   date_column: "Time"
